@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using FFImageLoading.Forms.Touch;
 
 namespace Fabrikam_Foods_App.iOS
 {
@@ -22,6 +23,9 @@ namespace Fabrikam_Foods_App.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
+            CachedImageRenderer.Init();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

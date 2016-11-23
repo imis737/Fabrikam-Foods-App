@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<ContentPage
+    x:Class="Fabrikam_Foods_App.ManusDeserts"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            iOS:&quot;0,20,0,0&quot;
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Button Clicked="Button_Clicked" Text="Back to Drinks?" />
+            <Button Clicked="Button_Clicked_1" Text="Back to Food?" />
+        </StackLayout>
+        <ScrollView
+            HorizontalOptions="Fill"
+            Orientation="Vertical"
+            VerticalOptions="Fill">
+
+
+            <Grid ColumnSpacing="10" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+                <ffimageloading:CachedImage
+                    x:Name="cheese"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    BitmapOptimizations="True"
+                    DownsampleToViewSize="True"
+                    TransparencyEnabled="False" />
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Cheese Board" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$27.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="An assorted cheese board with grapes and jam to suit." />
+                </StackLayout>
+
+                <ffimageloading:CachedImage
+                    x:Name="chocOysters"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    BitmapOptimizations="True"
+                    DownsampleToViewSize="True"
+                    TransparencyEnabled="False" />
+                <StackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Chocolate Oysters" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$10.00" />
+                    <Label HorizontalOptions="StartAndExpand" Text="A delicious bundle of chocolate glory." />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

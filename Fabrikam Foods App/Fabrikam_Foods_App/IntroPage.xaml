@@ -6,16 +6,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Fabrikam_Foods_App">
 
-    <!--  Icon="https://icons8.com/web-app/26137/Party-Baloon"  -->
-
-    <!--<NavigationPage Title="Welcome!">
-        <x:Arguments>-->
     <ContentPage Title="Welcome!">
         <Grid Padding="40" ColumnSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition Height="60" />
             </Grid.RowDefinitions>
+
             <StackLayout
                 Grid.Row="0"
                 Grid.Column="0"
@@ -44,19 +41,26 @@
             <Label
                 Grid.Row="1"
                 Grid.Column="0"
+                FontAttributes="Italic"
                 FontSize="20"
                 HorizontalOptions="Center"
-                Text="Select a tab to see what we have to offer you."
+                Text="Swipe left to get going!"
                 VerticalOptions="Center"
                 VerticalTextAlignment="Center" />
         </Grid>
     </ContentPage>
-    <!--</x:Arguments>
-    </NavigationPage>-->
 
     <NavigationPage Title="Menus">
         <x:Arguments>
             <local:Menus Title="Menus" />
         </x:Arguments>
     </NavigationPage>
+
+    <ContentPage Title="About Us">
+        <StackLayout>
+            <Label Text="Test" />
+        </StackLayout>
+
+    </ContentPage>
+
 </TabbedPage>

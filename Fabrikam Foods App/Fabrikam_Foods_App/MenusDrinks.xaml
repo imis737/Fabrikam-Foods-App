@@ -4,6 +4,7 @@
     x:Class="Fabrikam_Foods_App.MenusDrinks"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Padding>
@@ -12,12 +13,16 @@
         </OnPlatform>
     </ContentPage.Padding>
 
-    <ScrollView
-        HorizontalOptions="Fill"
-        Orientation="Vertical"
-        VerticalOptions="Fill">
-        <StackLayout>
-            <Button Clicked="Button_Clicked" Text="Would you like to see the Food Menu?" />
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Button Clicked="Button_Clicked" Text="Back to Food?" />
+            <Button Clicked="Button_Clicked_1" Text="On to Desert?" />
+        </StackLayout>
+        <ScrollView
+            HorizontalOptions="Fill"
+            Orientation="Vertical"
+            VerticalOptions="Fill">
+
 
             <Grid ColumnSpacing="10" RowSpacing="20">
                 <Grid.RowDefinitions>
@@ -25,13 +30,15 @@
                     <RowDefinition Height="150" />
                     <RowDefinition Height="150" />
                     <RowDefinition Height="150" />
-                    <RowDefinition Height="150" />
                 </Grid.RowDefinitions>
-                <Image
+                <ffimageloading:CachedImage
+                    x:Name="Martini"
                     Grid.Row="0"
                     Grid.Column="0"
                     Aspect="AspectFill"
-                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                    BitmapOptimizations="True"
+                    DownsampleToViewSize="True"
+                    TransparencyEnabled="False" />
                 <StackLayout
                     Grid.Row="0"
                     Grid.Column="1"
@@ -40,19 +47,22 @@
                     <Label
                         FontAttributes="Bold"
                         HorizontalOptions="StartAndExpand"
-                        Text="Pizza" />
+                        Text="Martini" />
                     <Label
                         FontAttributes="Italic"
                         HorizontalOptions="StartAndExpand"
-                        Text="$12.99" />
-                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                        Text="$11.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="The classic Martini." />
                 </StackLayout>
 
-                <Image
+                <ffimageloading:CachedImage
+                    x:Name="Mojito"
                     Grid.Row="1"
                     Grid.Column="0"
                     Aspect="AspectFill"
-                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                    BitmapOptimizations="True"
+                    DownsampleToViewSize="True"
+                    TransparencyEnabled="False" />
                 <StackLayout
                     Grid.Row="1"
                     Grid.Column="1"
@@ -61,19 +71,22 @@
                     <Label
                         FontAttributes="Bold"
                         HorizontalOptions="StartAndExpand"
-                        Text="Pizza" />
+                        Text="Mojito" />
                     <Label
                         FontAttributes="Italic"
                         HorizontalOptions="StartAndExpand"
-                        Text="$12.99" />
-                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                        Text="$11.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="A beautiful minty refresher. Classic." />
                 </StackLayout>
 
-                <Image
+                <ffimageloading:CachedImage
+                    x:Name="Negroni"
                     Grid.Row="2"
                     Grid.Column="0"
                     Aspect="AspectFill"
-                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                    BitmapOptimizations="True"
+                    DownsampleToViewSize="True"
+                    TransparencyEnabled="False" />
                 <StackLayout
                     Grid.Row="2"
                     Grid.Column="1"
@@ -82,19 +95,22 @@
                     <Label
                         FontAttributes="Bold"
                         HorizontalOptions="StartAndExpand"
-                        Text="Pizza" />
+                        Text="Negroni" />
                     <Label
                         FontAttributes="Italic"
                         HorizontalOptions="StartAndExpand"
-                        Text="$12.99" />
-                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                        Text="$11.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="Served on the rocks with a classic class. The gentleman's apéritif." />
                 </StackLayout>
 
-                <Image
+                <ffimageloading:CachedImage
+                    x:Name="LongIslandIcedTea"
                     Grid.Row="3"
                     Grid.Column="0"
                     Aspect="AspectFill"
-                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                    BitmapOptimizations="True"
+                    DownsampleToViewSize="True"
+                    TransparencyEnabled="False" />
                 <StackLayout
                     Grid.Row="3"
                     Grid.Column="1"
@@ -103,37 +119,18 @@
                     <Label
                         FontAttributes="Bold"
                         HorizontalOptions="StartAndExpand"
-                        Text="Pizza" />
+                        Text="Long Island Iced Tea" />
                     <Label
                         FontAttributes="Italic"
                         HorizontalOptions="StartAndExpand"
-                        Text="$12.99" />
-                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                        Text="$11.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="This doesn't need any description - we all have a memory that involves a Long Island Iced Tea. Play safe." />
                 </StackLayout>
 
-                <Image
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    Aspect="AspectFill"
-                    Source="https://media.timeout.com/images/102421929/image.jpg" />
-                <StackLayout
-                    Grid.Row="4"
-                    Grid.Column="1"
-                    Orientation="Vertical"
-                    VerticalOptions="Center">
-                    <Label
-                        FontAttributes="Bold"
-                        HorizontalOptions="StartAndExpand"
-                        Text="Pizza" />
-                    <Label
-                        FontAttributes="Italic"
-                        HorizontalOptions="StartAndExpand"
-                        Text="$12.99" />
-                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
-                </StackLayout>
+
 
             </Grid>
-        </StackLayout>
-    </ScrollView>
+        </ScrollView>
+    </StackLayout>
 
 </ContentPage>
