@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<TabbedPage
+    x:Class="Fabrikam_Foods_App.IntroPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Fabrikam_Foods_App">
+
+    <!--  Icon="https://icons8.com/web-app/26137/Party-Baloon"  -->
+
+    <!--<NavigationPage Title="Welcome!">
+        <x:Arguments>-->
+    <ContentPage Title="Welcome!">
+        <Grid Padding="40" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="0,20,0,0"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand">
+                <Image
+                    x:Name="mainLogoImage"
+                    Margin="30"
+                    HorizontalOptions="Center" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Welcome to Fabrikam Food!" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Enjoy your stay." />
+            </StackLayout>
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Select a tab to see what we have to offer you."
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+        </Grid>
+    </ContentPage>
+    <!--</x:Arguments>
+    </NavigationPage>-->
+
+    <NavigationPage Title="Menus">
+        <x:Arguments>
+            <local:Menus Title="Menus" />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Fabrikam_Foods_App.Menus"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            iOS:&quot;0,20,0,0&quot;
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ScrollView
+        HorizontalOptions="Fill"
+        Orientation="Vertical"
+        VerticalOptions="Fill">
+        <StackLayout>
+            <Button Clicked="Button_Clicked" Text="Would you like to see the Drinks Menu?" />
+
+            <Grid ColumnSpacing="10" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Pizza" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$12.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                </StackLayout>
+
+                <Image
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                <StackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Pizza" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$12.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                </StackLayout>
+
+                <Image
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                <StackLayout
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Pizza" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$12.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                </StackLayout>
+
+                <Image
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                <StackLayout
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Pizza" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$12.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                </StackLayout>
+
+                <Image
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    Source="https://media.timeout.com/images/102421929/image.jpg" />
+                <StackLayout
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalOptions="Center">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Pizza" />
+                    <Label
+                        FontAttributes="Italic"
+                        HorizontalOptions="StartAndExpand"
+                        Text="$12.99" />
+                    <Label HorizontalOptions="StartAndExpand" Text="Our hand crafted pizza is certain to bring you delicious pleasure." />
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
