@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Fabrikam_Foods_App.InfoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="20">
+
+    <StackLayout>
+        <Label
+            FontAttributes="Italic"
+            FontFamily=""
+            FontSize="60"
+            HorizontalOptions="Center"
+            Text="Nice to meet you!" />
+        <StackLayout Padding="20" Orientation="Horizontal">
+            <Image
+                x:Name="entrance"
+                Aspect="AspectFill"
+                HeightRequest="200"
+                WidthRequest="200" />
+            <Label
+                Margin="20"
+                FontAttributes="Italic"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                Text="We are a small boutique restaurant in Redmond that loves to feed hungry young tech savvy individuals."
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="20"
+            Text="Email:" />
+        <Label Text="fabrikamfoods@fabrikam.com" />
+        <Label
+            FontAttributes="Bold"
+            FontSize="20"
+            Text="Phone:" />
+        <Label Text="146 555 333" />
+        <Label
+            FontAttributes="Bold"
+            FontSize="20"
+            Text="Address:" />
+        <Label Text="7824 Leary Way NE, Redmond, WA 98052, USA" />
+        <StackLayout Padding="20">
+            <Label FontSize="17" Text="Bookings can be made from directly within the app via the 'Booking' tab, or via phone call. Feel free to drop in as well, we always have a table for you!" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

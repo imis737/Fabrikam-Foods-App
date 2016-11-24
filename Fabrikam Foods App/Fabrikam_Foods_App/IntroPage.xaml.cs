@@ -16,6 +16,10 @@ namespace Fabrikam_Foods_App
             InitializeComponent();
 
             mainLogoImage.Source = ImageSource.FromResource("Fabrikam_Foods_App.Images.Logomakr_3Pw6CZ.png");
+
+            background.Source = ImageSource.FromResource("Fabrikam_Foods_App.Images.imageedit_1_5505383931.jpg");
+
+
         }
     }
 }
