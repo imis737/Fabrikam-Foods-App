@@ -29,6 +29,10 @@ namespace Fabrikam_Foods_App.iOS
             global::Xamarin.Forms.Forms.Init();
 
             Xamarin.FormsMaps.Init();
+
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+            //SQLitePCL.CurrentPlatform.Init();
+
             LoadApplication(new App());
 
 

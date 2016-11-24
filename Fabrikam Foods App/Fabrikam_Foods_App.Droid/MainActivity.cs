@@ -25,6 +25,8 @@ namespace Fabrikam_Foods_App.Droid
 
             Xamarin.FormsMaps.Init(this, bundle);
 
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+
 
             LoadApplication(new App());
         }

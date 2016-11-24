@@ -73,6 +73,8 @@
         </x:Arguments>
     </NavigationPage>
 
+    <local:BookingsPage Title="Book!" />
+
     <local:InfoPage Title="About Us" />
 
 

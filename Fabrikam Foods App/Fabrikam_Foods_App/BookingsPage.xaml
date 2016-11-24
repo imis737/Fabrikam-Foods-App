@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Fabrikam_Foods_App.BookingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+
+    <RelativeLayout>
+        <Image
+            x:Name="background"
+            Aspect="AspectFill"
+            Opacity="0.3"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+
+        <StackLayout
+            Padding="30"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            VerticalOptions="Center">
+
+            <Label
+                Margin="15"
+                FontSize="17"
+                Text="Please enter your name, phone, email, and the date you'd like to make your booking. Then, simply tap 'Book now!' to make a booking. We won't consider bookings made outside of open hours."
+                TextColor="Black" />
+
+            <Entry
+                Keyboard="Text"
+                Placeholder="Name"
+                TextColor="Black" />
+            <Entry
+                Keyboard="Numeric"
+                Placeholder="Phone"
+                TextColor="Black" />
+            <Entry
+                Keyboard="Email"
+                Placeholder="Email"
+                TextColor="Black" />
+
+            <DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MMM yyyy" />
+
+            <TimePicker Time="15:00" />
+
+            <Button
+                BackgroundColor="Black"
+                Text="Book now!"
+                TextColor="White" />
+
+            <Label x:Name="label" />
+        </StackLayout>
+    </RelativeLayout>
+
+</ContentPage>
