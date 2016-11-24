@@ -4,21 +4,25 @@
     x:Class="Fabrikam_Foods_App.InfoPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Padding="20">
+    Padding="0,10,0,0">
 
     <ScrollView
         HorizontalOptions="Fill"
         Orientation="Vertical"
         VerticalOptions="Fill">
 
-        <StackLayout>
+        <StackLayout Padding="20">
             <Label
                 FontAttributes="Italic"
                 FontFamily=""
                 FontSize="60"
                 HorizontalOptions="Center"
                 Text="Nice to meet you!" />
-            <StackLayout Padding="20" Orientation="Horizontal">
+            <StackLayout
+                Padding="20"
+                HeightRequest="300"
+                Orientation="Horizontal"
+                WidthRequest="300">
                 <Image
                     x:Name="entrance"
                     Aspect="AspectFill"

@@ -60,7 +60,7 @@
                     FontAttributes="Italic"
                     FontSize="20"
                     HorizontalOptions="Center"
-                    Text="Swipe left to get going!"
+                    Text="Select a tab to get going!"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center" />
             </Grid>
@@ -73,7 +73,11 @@
         </x:Arguments>
     </NavigationPage>
 
-    <local:BookingsPage Title="Book!" />
+    <NavigationPage Title="Book">
+        <x:Arguments>
+            <local:BookingsPage Title="Book" />
+        </x:Arguments>
+    </NavigationPage>
 
     <local:InfoPage Title="About" />
 

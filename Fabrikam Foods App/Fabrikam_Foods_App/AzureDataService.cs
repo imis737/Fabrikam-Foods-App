@@ -40,7 +40,7 @@ namespace Fabrikam_Foods_App
             await Initialize();
             await SyncBooking();
 
-            return await bookingTable.OrderBy(c => c.DateUtc).ToEnumerableAsync();
+            return await bookingTable.OrderBy(c => c.Date).ToEnumerableAsync();
         }
 
         public async Task<Bookings> AddBooking(string name, string email, int number, DateTime date, TimeSpan time)
@@ -53,7 +53,7 @@ namespace Fabrikam_Foods_App
                 Name = name,
                 Email = email,
                 Number = number,
-                DateUtc = date,
+                Date = date,
                 Time = time
             };
 

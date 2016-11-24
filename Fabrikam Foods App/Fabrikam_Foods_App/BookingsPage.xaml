@@ -3,7 +3,8 @@
     x:Class="Fabrikam_Foods_App.BookingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    NavigationPage.HasNavigationBar="False">
 
 
     <RelativeLayout>
@@ -18,7 +19,7 @@
 
 
         <StackLayout
-            Padding="30"
+            Padding="20"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -58,6 +59,12 @@
                 BackgroundColor="Black"
                 Clicked="Button_Clicked"
                 Text="Book now!"
+                TextColor="White" />
+
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked_1"
+                Text="Your bookings"
                 TextColor="White" />
 
             <Label x:Name="label" />

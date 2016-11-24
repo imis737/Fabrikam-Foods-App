@@ -29,9 +29,24 @@ namespace Fabrikam_Foods_App
             DateTime date1 = date.Date;
             TimeSpan time1 = time.Time;
 
-            await azureService.AddBooking(name1, email1, phone1, date1, time1);
+            Bookings booki = new Bookings()
+            {
+                Name = name1,
+                Email = email1,
+                Number = phone1,
+                Date = date1,
+                Time = time1
+
+            };
+
+            await AzureManager.AzureManagerInstance.AddBooking(booki);
 
 
+        }
+
+        async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BookingsDisplayPage());
         }
     }
 }
