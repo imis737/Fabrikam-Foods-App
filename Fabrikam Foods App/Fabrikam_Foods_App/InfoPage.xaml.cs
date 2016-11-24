@@ -14,7 +14,7 @@ namespace Fabrikam_Foods_App
         {
             InitializeComponent();
 
-            entrance.Source = ImageSource.FromResource("Fabrikam_Foods_App.Images.Georges_Hotel_Istanbul_Boutique_Hotel-Hotel_Entrance_and_Restaurant.jpg");
+            //entrance.Source = ImageSource.FromResource("Fabrikam_Foods_App.Images.Georges_Hotel_Istanbul_Boutique_Hotel-Hotel_Entrance_and_Restaurant.jpg");
         }
     }
 }

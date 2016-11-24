@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="Fabrikam_Foods_App.BookingsUpdatePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <RelativeLayout>
+        <StackLayout
+            Padding="20"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            VerticalOptions="Center">
+
+            <Label
+                Margin="15"
+                FontSize="17"
+                Text="Please enter new information to change your booking. We won't consider bookings made outside of open hours."
+                TextColor="Black" />
+
+            <Entry
+                x:Name="name"
+                Keyboard="Text"
+                Placeholder="Name"
+                TextColor="Black" />
+            <Entry
+                x:Name="phone"
+                Keyboard="Numeric"
+                Placeholder="Phone"
+                TextColor="Black" />
+            <Entry
+                x:Name="email"
+                Keyboard="Email"
+                Placeholder="Email"
+                TextColor="Black" />
+
+            <DatePicker
+                x:Name="date"
+                Date="{x:Static sys:DateTime.Today}"
+                Format="d MMM yyyy" />
+
+            <TimePicker x:Name="time" Time="15:00" />
+
+            <Button
+                BackgroundColor="Black"
+                Clicked="Button_Clicked"
+                Text="Update your booking!"
+                TextColor="White" />
+
+            <Label x:Name="label" />
+        </StackLayout>
+    </RelativeLayout>
+
+</ContentPage>

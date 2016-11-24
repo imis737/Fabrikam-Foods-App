@@ -38,6 +38,9 @@
     <Compile Include="App.cs" />
     <Compile Include="AzureDataService.cs" />
     <Compile Include="AzureManager.cs" />
+    <Compile Include="BookingsUpdatePage.xaml.cs">
+      <DependentUpon>BookingsUpdatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataModels\Bookings.cs" />
     <Compile Include="BookingsDisplayPage.xaml.cs">
       <DependentUpon>BookingsDisplayPage.xaml</DependentUpon>
@@ -223,6 +226,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BookingsDisplayPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BookingsUpdatePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

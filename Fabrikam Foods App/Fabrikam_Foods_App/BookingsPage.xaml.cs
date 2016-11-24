@@ -21,7 +21,7 @@ namespace Fabrikam_Foods_App
 
         async public void Button_Clicked(object sender, EventArgs e)
         {
-            AzureDataService azureService = new AzureDataService();
+            //AzureDataService azureService = new AzureDataService();
             string name1 = name.Text;
             string email1 = email.Text;
             int phone1 = Convert.ToInt32(phone.Text);
@@ -40,6 +40,8 @@ namespace Fabrikam_Foods_App
             };
 
             await AzureManager.AzureManagerInstance.AddBooking(booki);
+
+            await DisplayAlert("Saved!", "Your booking has been saved! If you'd like to edit it, you can see your bookings by selecting the button below, and then selecting edit.", "OK");
 
 
         }

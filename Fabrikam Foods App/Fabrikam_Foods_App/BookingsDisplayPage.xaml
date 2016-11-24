@@ -6,24 +6,62 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     NavigationPage.HasNavigationBar="False">
 
-    <StackLayout>
-        <Button Clicked="Button_Clicked" Text="See your bookings!" />
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+    </ContentPage.Padding>
+
+    <StackLayout Padding="10,0,10,10">
+        <Button Clicked="Button_Clicked" Text="Refresh Bookings" />
         <ListView x:Name="BookingsList" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                                Clicked="MenuItem_Clicked"
+                                CommandParameter="{Binding .}"
+                                Text="Update" />
+                            <MenuItem
+                                Clicked="MenuItem_Clicked_1"
+                                CommandParameter="{Binding .}"
+                                IsDestructive="True"
+                                Text="Delete" />
+                        </ViewCell.ContextActions>
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="30" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="{Binding Name}" />
-                            <Label Grid.Column="1" Text="{Binding Email}" />
-                            <Label Grid.Column="2" Text="{Binding Date}" />
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="{Binding Name}" />
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="{Binding Number}" />
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Text="{Binding Date}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="{Binding Email}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding Time}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                IsVisible="False"
+                                Text="{Binding Id}" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
