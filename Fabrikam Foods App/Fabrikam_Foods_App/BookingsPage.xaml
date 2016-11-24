@@ -32,24 +32,31 @@
                 TextColor="Black" />
 
             <Entry
+                x:Name="name"
                 Keyboard="Text"
                 Placeholder="Name"
                 TextColor="Black" />
             <Entry
+                x:Name="phone"
                 Keyboard="Numeric"
                 Placeholder="Phone"
                 TextColor="Black" />
             <Entry
+                x:Name="email"
                 Keyboard="Email"
                 Placeholder="Email"
                 TextColor="Black" />
 
-            <DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MMM yyyy" />
+            <DatePicker
+                x:Name="date"
+                Date="{x:Static sys:DateTime.Today}"
+                Format="d MMM yyyy" />
 
-            <TimePicker Time="15:00" />
+            <TimePicker x:Name="time" Time="15:00" />
 
             <Button
                 BackgroundColor="Black"
+                Clicked="Button_Clicked"
                 Text="Book now!"
                 TextColor="White" />
 

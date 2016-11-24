@@ -6,7 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Fabrikam_Foods_App">
 
-    <ContentPage x:Name="intropage" Title="Welcome!">
+    <ContentPage x:Name="intropage" Title="Hi!">
 
         <RelativeLayout>
             <Image
@@ -67,15 +67,17 @@
         </RelativeLayout>
     </ContentPage>
 
-    <NavigationPage Title="Menus">
+    <NavigationPage Title="Menu">
         <x:Arguments>
-            <local:Menus Title="Menus" />
+            <local:Menus Title="Menu" />
         </x:Arguments>
     </NavigationPage>
 
     <local:BookingsPage Title="Book!" />
 
-    <local:InfoPage Title="About Us" />
+    <local:InfoPage Title="About" />
+
+    <local:MapPage Title="Where" />
 
 
 </TabbedPage>

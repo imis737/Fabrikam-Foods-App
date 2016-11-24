@@ -36,6 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="AzureDataService.cs" />
+    <Compile Include="Bookings.cs" />
     <Compile Include="BookingsPage.xaml.cs">
       <DependentUpon>BookingsPage.xaml</DependentUpon>
     </Compile>
@@ -47,6 +49,9 @@
     </Compile>
     <Compile Include="ManusDeserts.xaml.cs">
       <DependentUpon>ManusDeserts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Menus.xaml.cs">
       <DependentUpon>Menus.xaml</DependentUpon>
@@ -84,6 +89,10 @@
     </Reference>
     <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmHelpers, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Refractored.MvvmHelpers.1.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\MvvmHelpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -201,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\imageedit_1_4307878177.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
